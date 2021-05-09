@@ -1,28 +1,64 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id ="app-container">
+        <TitleBar />
+        <Landing v-if="this.$store.state.landingStatus === true"/>
+        <Quiz v-if="this.$store.state.quizStatus === true" />
+        <Result v-if="this.$store.state.resultStatus === true" />
+        <Answers v-if="this.$store.state.answerStatus === true" />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TitleBar from './components/TitleBar.vue'
+import Landing from './components/Landing.vue'
+import Quiz from './components/Quiz.vue'
+import Result from './components/Result.vue'
+import Answers from './components/Answers.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+      TitleBar,
+      Landing,
+      Quiz,
+      Result,
+      Answers
+  },
+  methods: {
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: sans-serif;
+    background: url(../src/assets/quizbg.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#answer {
+    margin-top: 2.5rem;
+}
+
+button {
+    border: none;
+    padding: 0.5rem;
+    background: red;
+    color: white;
+    outline: none;
+    font-size: 3vh;
+}
+
+
+
 </style>

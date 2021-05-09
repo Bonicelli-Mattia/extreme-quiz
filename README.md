@@ -1,24 +1,21 @@
 # extreme-quiz-single
 
-## Project setup
+## Introduction
+
+It was supposed to be a multiplayer quiz, but the multiplayer wasn't up to my standards (i.e. it wasn't really working consistently) in the time I was given to complete this project.
+
+## How to run the app
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+```
+npm run build
+```
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Tech Stack
 ```
-npm run build
+Uses Vue and Vuex, could have been easily achieved in vanilla javascript too.
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
