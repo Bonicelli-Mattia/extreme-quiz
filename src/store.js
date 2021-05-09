@@ -30,7 +30,7 @@ export default new Vuex.Store({
         answer: 2
       },
       {
-        question: 'How many weeks does it take to become a fullstack developer?',
+        question: 'How long does it take to become a fullstack dev?',
         option: ['5','It depends','12','Hey Google...'],
         answer: 1
       },
